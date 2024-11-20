@@ -1,11 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Holaaaaaaaaaa</title>
+    <title>Encuesta de Satisfacción</title>
+    <script src="js/js-encuesta.js"></script>
+
+    <link rel="stylesheet" href="styles/form.css">
+    
 </head>
 <body>
-    
+    <div class="container">
+        <h1>Encuesta de Satisfacción</h1>
+        <form action="#" method="POST">
+            <!-- Primera fila de preguntas -->
+            <div class="row">
+                <div class="form-group">
+                    <label for="satisfaction">¿Qué tan satisfecho estás?</label>
+                    <select id="satisfaction" name="satisfaction" required>
+                        <option value="" disabled selected>Selecciona</option>
+                        <option value="1"> Muy satisfecho </option>
+                        
+                        <option value="3"> Neutral</option>
+                        
+                        <option value="5"> Muy insatisfecho</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="recommend">¿Recomendarías esta página?</label>
+                    <select id="recommend" name="recommend" required>
+                        <option value="" disabled selected>Selecciona</option>
+                        <option value="yes">Sí</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Segunda fila de preguntas -->
+            <div class="row">
+                <div class="form-group">
+                    <label for="ease">¿Fue fácil encontrar lo que buscabas?</label>
+                    <select id="ease" name="ease" required>
+                        <option value="" disabled selected>Selecciona</option>
+                        <option value="1"> Sí</option>
+                        <option value="5"> No</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="design">¿Qué opinas del diseño visual?</label>
+                    <select id="design" name="design" required>
+                        <option value="" disabled selected>Selecciona</option>
+                        <option value="1"> Excelente</option>
+                        <option value="5"> Bueno</option>
+                        <option value="5"> Puede mejorar</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Tercera fila de preguntas -->
+            <div class="row">
+                <div class="form-group">
+                    <label for="speed">¿La página carga rápidamente?</label>
+                    <select id="speed" name="speed" required>
+                        <option value="" disabled selected>Selecciona</option>
+                        <option value="1"> Si</option>
+                        <option value="5"> No</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="features">¿Funcionaron correctamente las herramientas?</label>
+                    <select id="features" name="features" required>
+                        <option value="" disabled selected>Selecciona</option>
+                        <option value="yes">Sí</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Preguntas abiertas -->
+            <div class="form-group">
+                <label for="favorite">¿Qué aspecto de la página te gustó más?</label>
+                <textarea id="favorite" name="favorite" rows="2" placeholder="Escribe tu respuesta aquí"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="improvements">¿Qué te gustaría ver en la página?</label>
+                <textarea id="improvements" name="improvements" rows="2" placeholder="Escribe tu respuesta aquí"></textarea>
+            </div>
+
+            <!-- Botón de envío -->
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
 </body>
 </html>
