@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metro de Lima y Callao</title>
+    <link rel="stylesheet" href="styles/mlc.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <a href="index.html"><img src="assets/atu_logo.png" alt="Logo ATU"></a>
+        </div>
+        <div id="clock">Cargando hora...</div>
+        <script>
+            function updateClock() {
+                const options = { timeZone: 'America/Lima', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+                const date = new Date().toLocaleTimeString('es-PE', options);
+                document.getElementById('clock').textContent = date;
+            }
+
+            setInterval(updateClock, 1000);
+            updateClock(); // Llama inmediatamente para mostrar la hora sin esperar el intervalo
+        </script>
+        </div>
+    <div class="separacion1"></div>
+    <div class="titulo_contenido">
+        <h1>Metro de Lima y Callao</h1>
+    </div>
+    <div class="lines">
+        <div class="line">
+            <div class="xd">
+                <a href="linea1.html"><h3>L<br>I<br>N<br>E<br>A<br><br>1</h3></a>
+            </div>
+            <div class="mapa">
+                <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1OY0YH29sFktsAAvmGNoF07vVfYZRkgc&ehbc=2E312F&noprof=1" width="100%" height="90%"></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="separacion2"></div>
+    <div class="lines">
+        <div class="line">
+            <div class="xd">
+                <a href="linea2.html"><h3>L<br>I<br>N<br>E<br>A<br><br>2</h3></a>
+            </div>
+            <div class="mapa">
+                <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1iOgXW24fYuCoP57FyY1Os08Ut-mWTLk&ehbc=2E312F&noprof=1" width="100%" height="90%"></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="separacion2"></div>
+    <div class="lines">
+        <div class="line">
+            <div class="xd">
+                <a href="linea3.html"><h3>L<br>I<br>N<br>E<br>A<br><br>3</h3></a>
+            </div>
+            <div class="mapa">
+                <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1OY0YH29sFktsAAvmGNoF07vVfYZRkgc&ehbc=2E312F&noprof=1" width="100%" height="90%"></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="separacion2"></div>
+    <div class="lines">
+        <div class="line">
+            <div class="xd">
+                <a href="linea4.html"><h3>L<br>I<br>N<br>E<br>A<br><br>4</h3></a>
+            </div>
+            <div class="mapa">
+                <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1mXRTFlzOEoRLJhONF-e2SMFVVGSQdKo&ehbc=2E312F&noprof=1" width="100%" height="90%"></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="separacion2"></div>
+    <div class="footer">
+        <h1>Links Informativos</h1>
+    </div>
+</body>
+</html>

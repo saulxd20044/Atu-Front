@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linea 2</title>
+    <link rel="stylesheet" href="styles/linea2.css">
+    <script src="js/linea2.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <a href="index.html"><img src="assets/atu_logo.png" alt="Logo ATU"></a>
+            </div>
+            <div id="clock">Cargando hora...</div>
+            <script>
+                function updateClock() {
+                    const options = { timeZone: 'America/Lima', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+                    const date = new Date().toLocaleTimeString('es-PE', options);
+                    document.getElementById('clock').textContent = date;
+                }
+    
+                setInterval(updateClock, 1000);
+                updateClock(); // Llama inmediatamente para mostrar la hora sin esperar el intervalo
+            </script>
+            </div>
+        <div class="separacion1"></div>
+        <div class="contenido">
+            <div class="titulo_contenido">
+                <h1>Metro de Lima y Callao</h1>
+            </div>
+            <div class="titulo_linea">
+                <h1>Linea 2</h1>
+            </div>
+            <div class="subcontenido">
+                <div class="line-container">
+                    <h2>LINEA 2</h2>
+                    <div class="stations">
+                        <div class="station">
+                            <div class="circle"></div>
+                            <div class="station-name">Puerto del Callao</div>
+                        </div>
+                        <div class="station">
+                            <div class="circle"></div>
+                            <div class="station-name">Buenos Aires</div>
+                        </div>
+                        <div class="station">
+                            <div class="circle"></div>
+                            <div class="station-name">Juan Pablo II</div>
+                        </div>
+                        <div class="station">
+                            <div class="circle"></div>
+                            <div class="station-name">Insurgentes</div>
+                        </div>
+                        <div class="station">
+                            <div class="circle"></div>
+                            <div class="station-name">Carmen de la Legua</div>
+                        </div>
+                        <div class="station">
+                            <div class="circle"></div>
+                            <div class="station-name">Óscar R. Benavides</div>
+                        </div>
+                        <div class="station">
+                            <div class="circle"></div>
+                            <div class="station-name">San Marcos</div>
+                        </div>
+                        <div class="station">
+                            <div class="circle"></div>
+                            <div class="station-name">Elio</div>
+                        </div>
+                        <div class="station">
+                            <div class="circle"></div>
+                            <div class="station-name">La Alborada</div>
+                        </div>
+                        <div class="station">
+                            <div class="circle"></div>
+                            <div class="station-name">Tingo María</div>
+                        </div>
+                        <div class="station">
+                            <div class="circle"></div>
+                            <div class="station-name">Parque Murillo</div>
+                        </div>
+                        <div class="station">
+                            <div class="circle"></div>
+                            <div class="station-name">Plaza Bolognesi</div>
+                        </div>
+                        <div class="station">
+                            <div class="circle"></div>
+                            <div class="station-name">Estación Central</div>
+                        </div>
+                        <div class="station">
+                            <div class="circle"></div>
+                            <div class="station-name">Manco Cápac</div>
+                        </div>
+                        <div class="station">
+                            <div class="circle"></div>
+                            <div class="station-name">Cangallo</div>
+                        </div>
+                        <div class="station">
+                            <div class="circle"></div>
+                            <div class="station-name">28 de Julio</div>
+                        </div>
+                        <div class="station">
+                            <div class="circle"></div>
+                            <div class="station-name">Nicolás Ayllón</div>
+                        </div>
+                        <div class="station">
+                            <div class="circle"></div>
+                            <div class="station-name">Circunvalación</div>
+                        </div>
+                        <div class="station">
+                            <div class="circle"></div>
+                            <div class="station-name">San Juan de Dios</div>
+                        </div>
+                        <div class="station">
+                            <div class="circle"></div>
+                            <div class="station-name">Evitamiento</div>
+                        </div>
+                        <div class="station">
+                            <div class="circle"></div>
+                            <div class="station-name">Óvalo Santa Anita</div>
+                        </div>
+                        <div class="station">
+                            <div class="circle"></div>
+                            <div class="station-name">Colectora Industrial</div>
+                        </div>
+                        <div class="station">
+                            <div class="circle"></div>
+                            <div class="station-name">Hermilio Valdizán</div>
+                        </div>
+                        <div class="station">
+                            <div class="circle"></div>
+                            <div class="station-name">Mercado Santa Anita</div>
+                        </div>
+                        <div class="station">
+                            <div class="circle"></div>
+                            <div class="station-name">Vista Alegre</div>
+                        </div>
+                        <div class="station">
+                            <div class="circle"></div>
+                            <div class="station-name">Prolongación Javier Prado</div>
+                        </div>
+                        <div class="station">
+                            <div class="circle"></div>
+                            <div class="station-name">Municipalidad de ATE</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="info-container">
+                    <h2>INFORMACIÓN</h2>
+                    <div class="info" id="info-box">
+                        Selecciona una estación para ver la información.
+                    </div>
+                </div>
+                <div class="mapa">
+                    <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1iOgXW24fYuCoP57FyY1Os08Ut-mWTLk&ehbc=2E312F&noprof=1" width="100%" height="90%"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <h1>Links Informativos</h1>
+        </div>
+    </div>
+</body>
+</html>

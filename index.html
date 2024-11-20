@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autoridad de Transporte Urbano para Lima y Callao</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="encuesta-barra">
+            <div class="encuesta"><button><e href="encuesta.html">¿Cual fue su nivel de satisfaccion?</e></button></div>
+        </div>
+        <div class="logo">
+            <a href="index.html"><img src="assets/atu_logo.png" alt="Logo ATU"></a>
+        </div>
+        <div id="clock">Cargando hora...</div>
+        <script>
+            function updateClock() {
+                const options = { timeZone: 'America/Lima', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+                const date = new Date().toLocaleTimeString('es-PE', options);
+                document.getElementById('clock').textContent = date;
+            }
+
+            setInterval(updateClock, 1000);
+            updateClock(); // Llama inmediatamente para mostrar la hora sin esperar el intervalo
+        </script>
+        </div>
+    <div class="separacion1"></div>
+    <div class="container">
+        <div class="sidebar">
+            <div class="botones"><button><a href="mlc.html">METRO DE LIMA Y CALLAO</a></button></div>
+            <div class="botones"><button>METROPOLITANO</button></div>
+            <div class="botones"><button><a href="cc.html">CORREDORES COMPLEMENTARIO</a></button></div>
+            <div class="botones"><button>RUTAS TRADICIONALES</button></div>
+            <div class="botones"><button>TAXIS</button></div>
+        </div>
+        <div class="content">
+            <div class="search">
+                <h2>¿A dónde quieres ir?</h2>
+                <input type="text" placeholder="Ingresa tu destino...">
+                <button>Buscar</button>
+            </div>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/d/u/0/embed?mid=139wCXqF56NQIQCUpCDk0yZB-tCkKzYY&ehbc=2E312F&noprof=1" width="100%" height="100%"></iframe>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

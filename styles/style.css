@@ -1,0 +1,143 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+.container {
+    margin: 0 auto;
+    background-color: #F1F3F0;
+}
+.header {
+    height: 10em;
+    background-color: #064D94;
+    color: #ffffff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo img {
+    max-height: 70px;
+    margin-right: 10px;
+}
+#clock {
+    padding: 0.3em;
+    font-size: 3em;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #00A0E0;
+}
+.separacion1 {
+    height: 1.5em;
+    background-color: #00A0E0;
+}
+/* CONTENIDO */
+.container {
+    background-color: #064D94;
+    display: flex;
+    height: 48em;
+    justify-content: space-evenly;
+    align-items: center;
+}
+/* MENU */
+.sidebar {
+    background-color: #064D94;
+    width: 20%;
+    height: 80%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10%;
+}
+.botones {
+    background-color: #00A0E0;
+    height: 50%;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+.botones a {
+    color: white;
+    text-decoration: none;
+    height: 100%;
+    width: 100%;
+}
+.botones button {
+    height: 100%;
+    width: 100%;
+    background-color: #00A0E0;
+    border: none;
+    color: white;
+    font-size: 1.25em;
+    cursor: pointer;
+}
+.sidebar button:hover {
+    background-color: #005b96;
+}
+/* CUADRO DEL BUSCADOR Y MAPA */
+.content {
+    width: 65%;
+    height: 80%;
+    background-color: #064D94;
+    display: flex;    
+    flex-direction: column;
+    justify-content: space-between;
+}
+.search {
+    background-color: #00A0E0;
+    height: 15%;
+    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.search input[type="text"] {
+    width: 40%;
+    height: 30%;
+    padding: 10px;
+    font-size: 1.5em;
+    border: none;
+}
+.search button {
+    padding: 10px;
+    width: 10%;
+    height: 50%;
+    font-size: 1.5em;
+    background-color: #0077c8;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.map-container {
+    background-color: #ffffff;
+    width: 100%;
+    height: 80%;
+}
+.encuesta button {
+    color: black;
+    background-color: white;
+    text-decoration: none;
+    border-radius: 10%;
+    height: 100%;
+    width: 100%;
+}
+
+.encuesta e {
+    color:black;
+    font-size-adjust: 0.6;
+    text-decoration: none;
+    height: 100%;
+    width: 100%;
+}
