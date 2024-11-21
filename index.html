@@ -37,12 +37,50 @@
         </div>
         <div class="content">
             <div class="search">
-                <h2>¿A dónde quieres ir?</h2>
-                <input type="text" placeholder="Ingresa tu destino...">
-                <button>Buscar</button>
+                <h2>Tu origen</h2>
+                <input id="origin" type="text" placeholder="Ingresa tu origen...">
+                <h2>Tu destino</h2>
+                <input id="destination" type="text" placeholder="Ingresa tu destino...">
+                <button id="searchButton">Buscar</button>
             </div>
             <div class="map-container">
-                <iframe src="https://www.google.com/maps/d/u/0/embed?mid=139wCXqF56NQIQCUpCDk0yZB-tCkKzYY&ehbc=2E312F&noprof=1" width="100%" height="100%"></iframe>
+                <iframe id="map" 
+                        src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyCSPdeYwGurMopakxtq0IJQG8ejZ48mtEE"
+                        allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    
+        <script>
+            document.getElementById("searchButton").addEventListener("click", async () => {
+                // Capturar los valores de origen y destino
+                const origin = document.getElementById("origin").value;
+                const destination = document.getElementById("destination").value;
+    
+                if (!origin || !destination) {
+                    alert("Por favor, ingresa tanto el origen como el destino.");
+                    return;
+                }
+    
+                // Construir la URL del backend para obtener las direcciones
+                const apiUrl = `/api/routes/directions?origin=${encodeURIComponent(origin)}&destination=${encodeURIComponent(destination)}`;
+    
+                try {
+                    const response = await fetch(apiUrl);
+                    if (!response.ok) {
+                        throw new Error("Error al obtener la ruta desde el servidor.");
+                    }
+    
+                    // Actualizar el iframe con la nueva ruta
+                    const mapIframe = document.getElementById("map");
+                    const directionsUrl = `https://www.google.com/maps/embed/v1/directions?key=AIzaSyCSPdeYwGurMopakxtq0IJQG8ejZ48mtEE&origin=${encodeURIComponent(origin)}&destination=${encodeURIComponent(destination)}`;
+                    mapIframe.src = directionsUrl;
+                } catch (error) {
+                    console.error(error);
+                    alert("Hubo un problema al obtener la ruta.");
+                }
+            });
+        </script>
             </div>
         </div>
     </div>
