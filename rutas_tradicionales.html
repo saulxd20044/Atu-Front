@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Autoridad de Transporte Urbano para Lima y Callao</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <title>Lugares Más Concurridos en Lima</title>
+    <link rel="stylesheet" href="styles/rutas_tradicionales.css">
 </head>
 <body>
     <!-- Header de la página -->
@@ -44,49 +44,39 @@
             <div class="botones"><button>TAXIS</button></div>
         </div>
 
-        <!-- Contenido principal donde se incluye el buscador y el mapa -->
+        <!-- Contenido principal con el listado de lugares populares -->
         <div class="content">
-            <div class="search">
-                <h2>Tu origen</h2>
-                <input id="origin" type="text" placeholder="Ingresa tu origen...">
-                <h2>Tu destino</h2>
-                <input id="destination" type="text" placeholder="Ingresa tu destino...">
-                <button id="searchButton">Buscar</button>
-            </div>
+            <h2>Lugares Más Concurridos en Lima</h2>
+            <ul>
+                <li><button onclick="showLocation('Discoteca Ayahuasca', -12.054580, -77.033749)">Discoteca Ayahuasca</button></li>
+                <li><button onclick="showLocation('Restaurante Maido', -12.118027, -77.027699)">Restaurante Maido</button></li>
+                <li><button onclick="showLocation('Parque Kennedy', -12.122772, -77.033273)">Parque Kennedy</button></li>
+                <li><button onclick="showLocation('Larcomar', -12.128268, -77.028434)">Larcomar</button></li>
+                <li><button onclick="showLocation('Plaza Mayor de Lima', -12.046404, -77.031965)">Plaza Mayor de Lima</button></li>
+                <li><button onclick="showLocation('Barranco', -12.146091, -77.020097)">Barranco</button></li>
+            </ul>
 
+            <h3>Ubicación en el Mapa</h3>
             <!-- Contenedor para mostrar el mapa -->
             <div class="map-container">
                 <iframe id="map" 
-                        src="https://www.google.com/maps/embed/v1/directions?key=YOUR_API_KEY"
+                        src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=Lima"
                         allowfullscreen>
                 </iframe>
             </div>
         </div>
     </div>
 
-    <!-- Script para manejar la búsqueda y actualizar el iframe del mapa -->
+    <!-- Script para manejar la selección de lugares y actualizar el mapa -->
     <script>
-        document.getElementById("searchButton").addEventListener("click", async () => {
-            // Capturar los valores de origen y destino
-            const origin = document.getElementById("origin").value.trim();
-            const destination = document.getElementById("destination").value.trim();
+        function showLocation(name, lat, lng) {
+            // Construir la URL con la ubicación seleccionada
+            const mapIframe = document.getElementById("map");
+            const locationUrl = `https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=${lat},${lng}&zoom=15`;
 
-            // Validar entradas
-            if (!origin || !destination) {
-                alert("Por favor, ingresa tanto el origen como el destino.");
-                return;
-            }
-
-            try {
-                // Actualizar el iframe con la nueva ruta
-                const mapIframe = document.getElementById("map");
-                const directionsUrl = `https://www.google.com/maps/embed/v1/directions?key=YOUR_API_KEY&origin=${encodeURIComponent(origin)}&destination=${encodeURIComponent(destination)}`;
-                mapIframe.src = directionsUrl;
-            } catch (error) {
-                console.error(error);
-                alert("Hubo un problema al obtener la ruta.");
-            }
-        });
+            // Actualizar el iframe para mostrar la nueva ubicación
+            mapIframe.src = locationUrl;
+        }
     </script>
 </body>
 </html>

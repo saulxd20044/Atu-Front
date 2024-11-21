@@ -1,0 +1,147 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+.header {
+    background-color: #00539C; /* Azul Metropolitano */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.header .logo img {
+    height: 50px;
+}
+
+#clock {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Separation Line */
+.separacion1 {
+    height: 5px;
+    background-color: #FFC72C; /* Amarillo complementario */
+}
+
+/* Content */
+.contenido {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.titulo_contenido, .titulo_linea {
+    text-align: center;
+    color: #00539C;
+}
+
+.titulo_linea h1 {
+    font-size: 28px;
+    margin: 0;
+}
+
+.subcontenido {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Stations */
+.line-container {
+    flex: 1;
+    min-width: 300px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.line-container h2 {
+    color: #00539C;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.stations {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.station {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.circle {
+    width: 15px;
+    height: 15px;
+    background-color: #00539C;
+    border-radius: 50%;
+}
+
+.station-name {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Info Container */
+.info-container {
+    flex: 1;
+    min-width: 300px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.info-container h2 {
+    color: #00539C;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.info {
+    color: #333;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Map */
+.mapa iframe {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+.footer {
+    background-color: #00539C;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.footer h1 {
+    font-size: 18px;
+    margin: 0;
+}

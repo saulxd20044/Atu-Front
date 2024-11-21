@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metropolitano</title>
+    <link rel="stylesheet" href="styles/metropolitano.css">
+    <script src="js/metropolitano.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <a href="index.html"><img src="assets/atu_logo.png" alt="Logo ATU"></a>
+            </div>
+            <div id="clock">Cargando hora...</div>
+            <script>
+                function updateClock() {
+                    const options = { timeZone: 'America/Lima', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+                    const date = new Date().toLocaleTimeString('es-PE', options);
+                    document.getElementById('clock').textContent = date;
+                }
+    
+                setInterval(updateClock, 1000);
+                updateClock(); // Llama inmediatamente para mostrar la hora sin esperar el intervalo
+            </script>
+        </div>
+        <div class="separacion1"></div>
+        <div class="contenido">
+            <div class="titulo_contenido">
+                <h1>Metropolitano de Lima</h1>
+            </div>
+            <div class="titulo_linea">
+                <h1>Rutas Principales</h1>
+            </div>
+            <div class="subcontenido">
+                <div class="line-container">
+                    <h2>RUTA PRINCIPAL</h2>
+                    <div class="stations">
+                        <div class="station">
+                            <div class="circle"></div>
+                            <div class="station-name">Naranjal</div>
+                        </div>
+                        <div class="station">
+                            <div class="circle"></div>
+                            <div class="station-name">Izaguirre</div>
+                        </div>
+                        <div class="station">
+                            <div class="circle"></div>
+                            <div class="station-name">Independencia</div>
+                        </div>
+                        <div class="station">
+                            <div class="circle"></div>
+                            <div class="station-name">Los Jazmines</div>
+                        </div>
+                        <div class="station">
+                            <div class="circle"></div>
+                            <div class="station-name">Uni</div>
+                        </div>
+                        <div class="station">
+                            <div class="circle"></div>
+                            <div class="station-name">Caquetá</div>
+                        </div>
+                        <div class="station">
+                            <div class="circle"></div>
+                            <div class="station-name">Dos de Mayo</div>
+                        </div>
+                        <div class="station">
+                            <div class="circle"></div>
+                            <div class="station-name">Tacna</div>
+                        </div>
+                        <div class="station">
+                            <div class="circle"></div>
+                            <div class="station-name">Colmena</div>
+                        </div>
+                        <div class="station">
+                            <div class="circle"></div>
+                            <div class="station-name">Central</div>
+                        </div>
+                        <div class="station">
+                            <div class="circle"></div>
+                            <div class="station-name">Jirón de la Unión</div>
+                        </div>
+                        <div class="station">
+                            <div class="circle"></div>
+                            <div class="station-name">Estadio Nacional</div>
+                        </div>
+                        <div class="station">
+                            <div class="circle"></div>
+                            <div class="station-name">México</div>
+                        </div>
+                        <div class="station">
+                            <div class="circle"></div>
+                            <div class="station-name">Canadá</div>
+                        </div>
+                        <div class="station">
+                            <div class="circle"></div>
+                            <div class="station-name">Javier Prado</div>
+                        </div>
+                        <div class="station">
+                            <div class="circle"></div>
+                            <div class="station-name">Angamos</div>
+                        </div>
+                        <div class="station">
+                            <div class="circle"></div>
+                            <div class="station-name">Benavides</div>
+                        </div>
+                        <div class="station">
+                            <div class="circle"></div>
+                            <div class="station-name">Plaza Flores</div>
+                        </div>
+                        <div class="station">
+                            <div class="circle"></div>
+                            <div class="station-name">Ricardo Palma</div>
+                        </div>
+                        <div class="station">
+                            <div class="circle"></div>
+                            <div class="station-name">Matellini</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="info-container">
+                    <h2>INFORMACIÓN</h2>
+                    <div class="info" id="info-box">
+                        Selecciona una estación para ver la información.
+                    </div>
+                </div>
+                <div class="mapa">
+                    <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1NLXeASPDjRRuLUNQLyfE_tO2RuTNDI4&ehbc=2E312F&noprof=1" width="100%" height="90%"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <h1>Links Informativos</h1>
+        </div>
+    </div>
+</body>
+</html>
