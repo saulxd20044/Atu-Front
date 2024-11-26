@@ -143,3 +143,52 @@ body::-webkit-scrollbar {
     height: 100%;
     width: 100%;
 }
+
+.caja-iniciar{
+    display: flex;
+    justify-content: space-between; /* Distribuye el espacio entre los botones */
+    padding: 20px; /* Añade un poco de espacio alrededor del contenedor */
+  }
+  .caja-iniciar button {
+    padding: 5px 35px;
+    border: 1px solid black;
+    background: transparent;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    color: black;
+    outline: none;
+    transition: all 300ms;
+  }
+  .caja-iniciar button:hover {
+    background: #fff;
+    color: rgba(0, 89, 255, 0.74);
+  }
+  .caja-iniciar {
+    position: fixed; /* Mantiene el botón en una posición fija en la pantalla */
+    top: 10px; /* Distancia desde el borde superior de la ventana */
+    right: 70px; /* Distancia desde el borde derecho de la ventana */
+    display: flex;
+    justify-content: center; /* Centra el botón dentro del contenedor */
+    padding: 20px; /* Añade un poco de espacio alrededor del contenedor */
+    z-index: 1000; /* Asegura que el botón esté por encima de otros elementos */
+  }
+  
+  .caja-iniciar button {
+    padding: 10px 50px; /* Ajusta el tamaño del botón */
+    border: 2px solid white; /* Cambia el color del borde */
+    background-color:rgba(0, 60, 255, 0.719); /* Cambia el color de fondo */
+    font-size: 16px; /* Ajusta el tamaño de la fuente */
+    font-weight: bold; /* Cambia el peso de la fuente */
+    cursor: pointer;
+    color: white; /* Cambia el color del texto */
+    outline: none;
+    transition: all 300ms;
+  }
+  
+  .caja-iniciar button:hover {
+    background-color: transparent; /* Cambia el color de fondo al hacer hover */
+    border-color: rgba(0, 0, 0, 0.568); /* Cambia el color del borde al hacer hover */
+    color: rgba(255, 255, 255, 0.781); /* Asegura que el color del texto sigue siendo blanco */
+  }
+  

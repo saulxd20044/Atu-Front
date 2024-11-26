@@ -7,17 +7,21 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <!-- Header de la página -->
     <div class="header">
         <div class="encuesta-barra">
-            <div class="encuesta">
-                <button><a href="encuesta.html">¿Cuál fue su nivel de satisfacción?</a></button>
-            </div>
+            <div class="encuesta"><button><a href="encuesta.html">¿Cual fue su nivel de satisfaccion?</a></button></div>
         </div>
         <div class="logo">
             <a href="index.html"><img src="assets/atu_logo.png" alt="Logo ATU"></a>
         </div>
         <div id="clock">Cargando hora...</div>
+        <div class="caja-iniciar">
+            <div class="caja-iniciar-sesion">
+                <a href="indexl.html">
+                    <button id="btn-iniciar-sesion">Iniciar sesión</button>
+                </a>
+            </div>
+        </div>
         <script>
             function updateClock() {
                 const options = { timeZone: 'America/Lima', hour: '2-digit', minute: '2-digit', second: '2-digit' };
@@ -28,12 +32,8 @@
             setInterval(updateClock, 1000);
             updateClock(); // Llama inmediatamente para mostrar la hora sin esperar el intervalo
         </script>
-    </div>
-
-    <!-- Separador entre el header y el contenido -->
+        </div>
     <div class="separacion1"></div>
-
-    <!-- Contenedor principal -->
     <div class="container">
         <!-- Barra lateral con los botones de navegación -->
         <div class="sidebar">
@@ -43,50 +43,19 @@
             <div class="botones"><button><a href="rutas_tradicionales.html">RUTAS TRADICIONALES</a></button></div>
             <div class="botones"><button>TAXIS</button></div>
         </div>
-
-        <!-- Contenido principal donde se incluye el buscador y el mapa -->
         <div class="content">
             <div class="search">
                 <h2>Tu origen</h2>
-                <input id="origin" type="text" placeholder="Ingresa tu origen...">
+                <input type="text" placeholder="Ingresa tu origen...">
                 <h2>Tu destino</h2>
-                <input id="destination" type="text" placeholder="Ingresa tu destino...">
-                <button id="searchButton">Buscar</button>
+                <input type="text" placeholder="Ingresa tu destino...">
+                <button>Buscar</button>
             </div>
-
-            <!-- Contenedor para mostrar el mapa -->
+            
             <div class="map-container">
-                <iframe id="map" 
-                        src="https://www.google.com/maps/embed/v1/directions?key=YOUR_API_KEY"
-                        allowfullscreen>
-                </iframe>
+                <iframe src="https://www.google.com/maps/d/u/0/embed?mid=139wCXqF56NQIQCUpCDk0yZB-tCkKzYY&ehbc=2E312F&noprof=1" width="100%" height="100%"></iframe>
             </div>
         </div>
     </div>
-
-    <!-- Script para manejar la búsqueda y actualizar el iframe del mapa -->
-    <script>
-        document.getElementById("searchButton").addEventListener("click", async () => {
-            // Capturar los valores de origen y destino
-            const origin = document.getElementById("origin").value.trim();
-            const destination = document.getElementById("destination").value.trim();
-
-            // Validar entradas
-            if (!origin || !destination) {
-                alert("Por favor, ingresa tanto el origen como el destino.");
-                return;
-            }
-
-            try {
-                // Actualizar el iframe con la nueva ruta
-                const mapIframe = document.getElementById("map");
-                const directionsUrl = `https://www.google.com/maps/embed/v1/directions?key=YOUR_API_KEY&origin=${encodeURIComponent(origin)}&destination=${encodeURIComponent(destination)}`;
-                mapIframe.src = directionsUrl;
-            } catch (error) {
-                console.error(error);
-                alert("Hubo un problema al obtener la ruta.");
-            }
-        });
-    </script>
 </body>
 </html>
